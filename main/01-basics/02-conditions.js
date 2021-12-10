@@ -2,7 +2,10 @@
  * Write a function that returns "raspberry !" if the provided fruit is a raspberry, and "doh !" otherwise
  */
 export function basicCondition(fruit) {
-    
+    if (fruit === "raspberry") {
+        return "raspberry !"
+    }
+    return "doh !"
 }
 
 /**
@@ -10,9 +13,19 @@ export function basicCondition(fruit) {
  * It must return : "higher !" if the random number is greater, "lower..." if it is smaller, and
  * "Yes ! The number was {number}" if it is equal
  */
-export function guessTheNumber(n) {
+ export function guessTheNumber(n) {
     const random = Math.floor(10 * Math.random() + 1)
+    if (random > n) {
+        return "higher !"
+    }
+    else if ( random < n ) {
+        return "lower..." + random 
+    }
+    else return "Yes ! The number was " + random 
 }
+let result = guessTheNumber(6)
+console.log (result) 
+
 
 /**
  * Write a function that computes the sum of the two given integer values. If the two values are the same, then return triple their sum
