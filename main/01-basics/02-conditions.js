@@ -31,7 +31,10 @@ console.log (result)
  * Write a function that computes the sum of the two given integer values. If the two values are the same, then return triple their sum
  */
 export function sumOrTriple(a, b) {
-    
+    if (a === b) {
+        return (a+b)*3
+    }
+    else return a+b 
 }
 
 /**
@@ -40,21 +43,39 @@ export function sumOrTriple(a, b) {
  * To get the absolute difference of a number, use Math.abs(number)
  */
 export function absoluteDiff(n) {
-    
+    if (n > 51) {
+        return Math.abs(n-51)*3
+    }
+    else return Math.abs (n-51)
 }
 
 /**
  * Write a function to check two given integers, and return true if one of them is 30 or if their sum is 30
  */
 export function is30OrSumIs30(a, b) {
-    
+    if (a === 30) {
+        return true
+    }
+    else if (b === 30) {
+        return true
+    }
+    else if (a+b === 30) {
+        return true
+    }
+    else return false
 }
 
 /**
  * Write a function to check whether a given positive number is a multiple of 3 or a divisible by 7
  */
 export function isMultipleOf3OrDivisibleBy7(n) {
-    
+    if (n % 3 === 0) {
+        return true
+    }
+    else if (n % 7 === 0) {
+        return true
+    }
+    else return false
 }
 
 /**
@@ -75,5 +96,14 @@ export function closestTo100(x, y) {
  * if a word is unknown, "UNKNOWN" should be returned
  */
 export function categorizeWord(word) {
-    
+    if (word === "raspberry" || word === "orange" || word === "apple" || word === "banana") {
+        return "FRUIT"
+    }
+    else if (word === "paris" || word === "london" || word === "new-york" || word === "berlin") {
+        return "CITY"
+    }
+    else if (word === "cat" || word === "dog" || word === "bird" || word === "horse" || word === "fish") {
+        return "ANIMAL"
+    }
+    else return "UNKNOW"
 }
